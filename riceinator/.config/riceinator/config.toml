@@ -1,0 +1,14 @@
+[files]
+xresources = "/home/matt/.Xresources"
+bar = "/home/matt/bin/bar.sh"
+bspwmrc = "/home/matt/.config/bspwm/bspwmrc"
+
+[variables]
+font = "DejaVuSansMono:size=24"
+wallpaper = "cyberpunk.jpg"
+
+bg = "#1b1b1b"
+fg = "#777777"
+red = "#7e5c62"
+grn = "#658861"
+blu = "#628b87"

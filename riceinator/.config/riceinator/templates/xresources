@@ -1,0 +1,68 @@
+! vim: set filetype=xdefaults :
+
+URxvt.font: xft:{{ font }}
+! URxvt.font: xft:SourceCodePro:size=25
+
+! Fuck bold fonts
+URxvt*boldFont: 
+URxvt*italicFont: 
+URxvt*bolditalicFont: 
+
+URxvt*lineSpace: 8
+URxvt.letterSpace: 0
+URxvt.scrollBar: false
+
+! set terminal padding
+URxvt.internalBorder: 40
+
+! set cursor blinking
+URxvt.cursorBlink: 1
+
+! set bell
+URxvt.urgentOnBell: true
+
+! Copy/paste
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard,matcher
+
+! Open urls
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! special
+*.foreground:   {{ fg }}
+*.background:   {{ bg }}
+*.cursorColor:  {{ blu }}
+
+! black
+*.color0:       {{ bg }}
+*.color8:       {{ fg }}
+
+! red
+*.color1:       {{ red }}
+*.color9:       {{ red }}
+
+! green
+*.color2:       {{ grn }}
+*.color10:      {{ grn }}
+
+! yellow
+*.color3:       {{ grn }}
+*.color11:      {{ grn }}
+
+! blue
+*.color4:       {{ blu }}
+*.color12:      {{ blu }}
+
+! magenta
+*.color5:       {{ blu }}
+*.color13:      {{ blu }}
+
+! cyan
+*.color6:       {{ blu }}
+*.color14:      {{ blu }}
+
+! white
+*.color7:       {{ fg }}
+*.color15:      {{ fg }}

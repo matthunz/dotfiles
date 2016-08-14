@@ -1,0 +1,47 @@
+#!/bin/bash
+#
+# Lemonbar script
+#
+
+font="xft:DejaVuSansMono:size=26"
+glyphs="MaterialIcons-26"
+
+fg="{{ fg }}"
+bg="{{ bg }}"
+light="{{ blu }}"
+
+hex="f1fa8c"
+razer_bcd_controller -5 $(printf "%d %d %d\n" 0x${hex:0:2} 0x${hex:2:2} 0x${hex:4:2})
+
+getTime(){
+  echo "%{F$light} %{F$fg}$(date +"%I:%M")"
+}
+
+getCpu() {
+  echo "%{F$light} %{F$fg}$(echo $(ps -A -o pcpu | tail -n+2 | paste -sd+ | bc) / 2 | bc)%"
+}
+
+getBattery() {
+  icon=""
+  if [[ $(cat /sys/class/power_supply/BAT0/status) = "Charging" ]]; then
+    icon=""
+  fi
+  echo "%{F$light}"$icon%{F$fg} $(cat /sys/class/power_supply/BAT0/capacity)
+}
+
+getDesktop(){
+  for i in $(bspc query -D); do
+    if [ $i = $(bspc query -D -d) ]; then
+      echo %{F$light}
+    else
+      echo %{F$fg}
+    fi
+  done
+}
+
+killall lemonbar
+
+while true; do
+  echo %{l} "  " $(getDesktop)%{r} $(getBattery) " " $(getCpu) " " $(getTime)"   "   
+  sleep 1
+done | lemonbar -g "1400x80+1220+0" -B $bg -o 0 -f $font -o -3 -f $glyphs | sh &

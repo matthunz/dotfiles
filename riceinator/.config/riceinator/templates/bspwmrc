@@ -1,0 +1,36 @@
+#!/bin/zsh
+#
+# Bspwm configuration
+#
+
+# =====================
+# Initialition
+# =====================
+
+~/bin/bar.sh
+compton --vsync opengl --paint-on-overlay &
+hsetroot -fill ~/pictures/{{ wallpaper }}
+
+xinput set-prop 15 274 1
+xinput set-prop 15 295 1
+
+# =====================
+# Config
+# =====================
+
+color_normal_border="{{ bg }}"
+color_focused_border="{{ fg }}"
+color_presel_feedback="{{ grn }}"
+
+bspc config border_width        6
+bspc config window_gap          100
+bspc config top_padding         50
+
+bspc config split_ratio          0.5
+
+bspc config paddingless_monocle  true
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config click_to_focus       true
+
+bspc monitor -d 1 2 3 4 5 6
