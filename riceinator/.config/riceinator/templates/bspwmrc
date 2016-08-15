@@ -9,7 +9,7 @@
 
 ~/bin/bar.sh
 compton --vsync opengl --paint-on-overlay &
-hsetroot -fill ~/pictures/{{ wallpaper }}
+hsetroot -fill ~/img/{{ wallpaper }}
 
 xinput set-prop 15 274 1
 xinput set-prop 15 295 1
