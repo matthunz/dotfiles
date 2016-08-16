@@ -4,7 +4,7 @@ bar = "/home/matt/bin/bar.sh"
 bspwmrc = "/home/matt/.config/bspwm/bspwmrc"
 sxhkdrc = "/home/matt/.config/sxhkd/sxhkdrc"
 
-[variables]
+[default]
 font = "DejaVuSansMono:size=24"
 wallpaper = "cyberpunk.jpg"
 
