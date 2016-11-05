@@ -6,10 +6,24 @@ sxhkdrc = "/home/matt/.config/sxhkd/sxhkdrc"
 
 [default]
 font = "DejaVuSansMono:size=24"
-wallpaper = "cyberpunk.jpg"
-
 bg = "#1b1b1b"
 fg = "#777777"
 red = "#7e5c62"
 grn = "#658861"
 blu = "#628b87"
+
+[slate]
+font = "DejaVuSansMono:size=24"
+bg = "#242a2b"
+fg = "#939381"
+red = "#674839"
+grn = "#6e794f"
+blu = "#3b474e"
+
+[shade]
+font = "DejaVuSansMono:size=24"
+bg = "#2e2e2e"
+fg = "#ededb7"
+red = "#c77369"
+grn = "#93988a"
+blu = "#747f89"

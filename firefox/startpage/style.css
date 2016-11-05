@@ -3,9 +3,9 @@ a{
   text-decoration: none;
 }
 html{
-  --bg: #202328;
-  --fg: #deded6;
-  --hi: #769070;
+  --bg: #2e2e2e;
+  --fg: #ededb7;
+  --hi: #93988a;
   font-family: monospace;
   background: var(--bg);
 }
