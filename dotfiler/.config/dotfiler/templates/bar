@@ -3,15 +3,12 @@
 # Lemonbar script
 #
 
-font="xft:DejaVuSansMono:size=26"
-glyphs="MaterialIcons-26"
+font="xft:{{font}}:size={{font_size}}"
+glyphs="{{icon_font}}-{{font_size}}"
 
 fg="{{ fg }}"
 bg="{{ bg }}"
 light="{{ blu }}"
-
-hex="f1fa8c"
-razer_bcd_controller -5 $(printf "%d %d %d\n" 0x${hex:0:2} 0x${hex:2:2} 0x${hex:4:2})
 
 getTime(){
   echo "%{F$light} %{F$fg}$(date +"%I:%M")"

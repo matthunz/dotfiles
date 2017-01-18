@@ -3,9 +3,12 @@ xresources = "/home/matt/.Xresources"
 bar = "/home/matt/bin/bar.sh"
 bspwmrc = "/home/matt/.config/bspwm/bspwmrc"
 sxhkdrc = "/home/matt/.config/sxhkd/sxhkdrc"
+dunstrc = "/home/matt/.config/dunst/dunstrc"
 
 [default]
-font = "DejaVuSansMono:size=24"
+font = "DejaVuSansMono"
+icon_font = "MaterialIcons"
+font_size = "26"
 bg = "#1b1b1b"
 fg = "#777777"
 red = "#7e5c62"

@@ -1,7 +1,6 @@
 ! vim: set filetype=xdefaults :
 
-URxvt.font: xft:{{ font }}
-! URxvt.font: xft:SourceCodePro:size=25
+URxvt.font: xft:{{ font }}:size={{ font_size }}
 
 ! Fuck bold fonts
 URxvt*boldFont: 
