@@ -1,6 +1,7 @@
 #
 # wm independent hotkeys
 #
+#
 
 # terminal emulator
 super + Return
@@ -13,6 +14,13 @@ super + space
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# backlight
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+XF86MonBrightnessDown
+  xbacklight -dec 10
 
 #
 # bspwm hotkeys

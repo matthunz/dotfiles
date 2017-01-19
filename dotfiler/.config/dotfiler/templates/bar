@@ -8,7 +8,7 @@ glyphs="{{icon_font}}-{{font_size}}"
 
 fg="{{ fg }}"
 bg="{{ bg }}"
-light="{{ blu }}"
+light="{{ light }}"
 
 getTime(){
   echo "%{F$light} %{F$fg}$(date +"%I:%M")"
