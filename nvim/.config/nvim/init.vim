@@ -1,46 +1,43 @@
-syntax enable
 
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab smarttab
-set relativenumber
-set bg=dark
+set number
 
-" Disable bells
-set noerrorbells visualbell t_vb=
-if has('autocmd')
-    autocmd GUIEnter * set visualbell t_vb=
-endif
+set background=dark
+set fillchars=vert:\ ,stl:\ ,stlnc:\ 
+set laststatus=2
+
+"set omnifunc=syntaxcomplete#Complete
 
 let g:deoplete#enable_at_startup = 1
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
-set completeopt=longest,menuone,preview
-let g:deoplete#sources = {}
-let g:deoplete#sources['javascript.jsx'] = ['file', 'ultisnips', 'ternjs']
-let g:tern#command = ['tern']
-let g:tern#arguments = ['--persistent']
+call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
+Plug 'sheerun/vim-polyglot'
+Plug 'ctrlpvim/ctrlp.vim'
 
-let g:deoplete#omni#functions = {}
-let g:deoplete#omni#functions.javascript = [
-  \ 'tern#Complete',
-  \ 'jspc#omni'
-\]
-
-autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-let g:UltiSnipsExpandTrigger="<C-j>"
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-call plug#begin('~/.config/nvim/bundle')
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'ervandew/supertab'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm installi'}
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'zchee/deoplete-jedi'
-Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
-Plug 'kien/ctrlp.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'airblade/vim-gitgutter'
+
+Plug 'bling/vim-airline'
+
+Plug 'neomake/neomake'
+autocmd! BufWritePost * Neomake
+
+Plug 'slashmili/alchemist.vim'
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'fishbullet/deoplete-ruby'
+Plug 'ervandew/supertab'
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'kchmck/vim-coffee-script'
+
 call plug#end()
+
+colorscheme gruvbox
