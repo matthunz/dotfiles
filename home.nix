@@ -26,7 +26,7 @@
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    pkgs.nerdfonts
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -76,6 +76,17 @@
     userEmail = "matthunz2@gmail.com";
   };
 
-  # Let Home Manager install and manage itself.
+  programs.starship = {
+    enable = true;
+  };
+
+  programs.alacritty = {
+      enable = true;
+      settings = {
+    	  font.normal.family = "MonaspiceRN Nerd Font Mono";
+        font.size = 18;
+      };
+  };
+
   programs.home-manager.enable = true;
 }
