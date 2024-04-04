@@ -72,6 +72,7 @@
 
   programs.git = {
     enable = true;
+    lfs.enable = true;
     userName = "Matt Hunzinger";
     userEmail = "matthunz2@gmail.com";
   };
